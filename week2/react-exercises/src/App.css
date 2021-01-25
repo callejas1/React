@@ -1,0 +1,63 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.wrapper {
+  box-shadow: 10px 12px 20px 3px #eee;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 10px;
+}
+
+.friendBtn,
+.dogBtn {
+  padding: 15px 150px;
+  margin: 0px 20px;
+  color: white;
+  font-size: 16px;
+  border: none;
+  font-weight: 900;
+  transition: 0.2s;
+}
+
+.friendBtn {
+  background-color: #4caf50;
+}
+
+.dogBtn {
+  background-color: #3c838b;
+}
+
+.dogBtn:hover,
+.friendBtn:hover {
+  transform: scale(1, 1.1);
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  text-align: center;
+  padding: 20px;
+}
+
+.punchline {
+  font-weight: normal;
+}
+
+img {
+  margin: 15px;
+  max-width: 400px;
+  max-height: fit-content;
+}
+
+.dogImg {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
