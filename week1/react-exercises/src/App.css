@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+
+.guaranteeStyle {
+  display: flex;
+  align-items: baseline;
+  margin: 20px;
+}

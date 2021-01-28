@@ -1,14 +1,9 @@
 import './App.css';
 import { HobbyList } from './HobbyList';
 import { Counter } from './Counter';
-import { instantiateGuarantee } from './GuaranteeInstance';
+import { GuaranteeList } from './GuaranteeInstance';
 
 function App() {
-  const guaranteeStyle = {
-    display: 'flex',
-    alignItems: 'baseline',
-  };
-
   return (
     <div className="App">
       <div>
@@ -17,11 +12,11 @@ function App() {
       </div>
       <div>
         <h1>E-commerce</h1>
-        <div style={guaranteeStyle}>{instantiateGuarantee}</div>
+        <GuaranteeList />
       </div>
       <div>
         <h1>Counter</h1>
-        <Counter style={{}} />
+        <Counter />
       </div>
     </div>
   );

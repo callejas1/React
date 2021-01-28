@@ -11,7 +11,7 @@ Pass down to each component the appropriate content. Take the images from the as
 
 export function Guarantee(props) {
   return (
-    <div style={{ margin: 20 }}>
+    <div>
       <img src={props.img} alt={props.alt} />
       <h2>{props.title}</h2>
       <p>{props.description}</p>

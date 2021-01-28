@@ -21,11 +21,11 @@ export function HobbyList() {
     listStyleType: 'none',
   };
   const hobby = hobbies.map((hobby, i) => (
-    <Hobbies key={'el' + i} hobbyName={hobby} />
+    <Hobby key={'el' + i} hobbyName={hobby} />
   ));
   return <ul style={liStyle}>{hobby}</ul>;
 }
 
-function Hobbies(props) {
+function Hobby(props) {
   return <li key={props.key}>{props.hobbyName}</li>;
 }

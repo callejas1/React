@@ -21,15 +21,20 @@ const guaranteeDetails = [
   },
 ];
 
-export const instantiateGuarantee = guaranteeDetails.map((guarantee) => {
+export function GuaranteeList() {
   return (
-    <div>
-      <Guarantee
-        img={guarantee.img}
-        alt={guarantee.alt}
-        title={guarantee.title}
-        description={guarantee.description}
-      />
+    <div className="guaranteeStyle">
+      {' '}
+      {guaranteeDetails.map((guarantee) => {
+        return (
+          <Guarantee
+            img={guarantee.img}
+            alt={guarantee.alt}
+            title={guarantee.title}
+            description={guarantee.description}
+          />
+        );
+      })}
     </div>
   );
-});
+}
