@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import Button from './FriendButton';
 import FriendProfile from './FriendProfile';
 
 export default function Friends() {
   const FRIEND_URL = 'https://www.randomuser.me/api?results=1';
-  const [friend, setFriend] = useState('');
+  const [friend, setFriend] = useState(null);
   const [error, setError] = useState();
   const [isLoading, setLoading] = useState(false);
 
@@ -28,15 +28,9 @@ export default function Friends() {
 
   return (
     <div className="wrapper">
-      <div>
-        <Button getFriend={getFriend}></Button>
-      </div>
+      <Button getFriend={getFriend} />
       {isLoading && <p>Loading...</p>}
-      {friend !== '' && !isLoading && (
-        <div>
-          <FriendProfile friend={friend} />
-        </div>
-      )}
+      {friend && !isLoading && <FriendProfile friend={friend} />}
       {error && <p>Something went wrong :( {error}</p>}
     </div>
   );

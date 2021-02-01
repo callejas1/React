@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import Button from './DogButton';
 import DogPhoto from './DogPhoto';
 
 export default function DogGallery() {
@@ -41,7 +41,7 @@ export default function DogGallery() {
       {dogPhotos !== '' && !isLoading && (
         <div className="dogImg">
           {dogPhotos.map((doggo, i) => (
-            <DogPhoto doggo={doggo} key={i}/>
+            <DogPhoto doggo={doggo} key={i} />
           ))}
         </div>
       )}

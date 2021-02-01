@@ -1,8 +1,7 @@
 import './App.css';
-import DogPhoto from './Doggo-API/DogPhoto';
-import Friends from './A-friend-API/Friends';
-import DogGallery from './Doggo-API/DogGallery';
-import RandomJoke from './Joke-API/RandomJoke';
+import Friends from './components/Friends';
+import DogGallery from './components/DogGallery';
+import RandomJoke from './components/RandomJoke';
 
 function App() {
   return (
