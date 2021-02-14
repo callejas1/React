@@ -33,9 +33,6 @@ export const WeatherApp = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  };
-
-  const handleChange = (event) => {
     setCityName(event.target.value);
   };
 
@@ -55,7 +52,6 @@ export const WeatherApp = () => {
       <Form
         cityName={cityName}
         getWeather={getWeather}
-        handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
       {error && <p className="error-message">{error}</p>}
@@ -65,8 +61,7 @@ export const WeatherApp = () => {
             <CityCard
               weatherData={city}
               key={index}
-              removeCity={removeCity}
-              index={index}
+              removeCity={() => removeCity(index)}
             />
           ))
         : !isLoading &&
